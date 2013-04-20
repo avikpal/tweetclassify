@@ -10,14 +10,7 @@ for string in lines:
 	space_pos=[m.start() for m in re.finditer(' ',string)]
 	i=len(space_pos)
 	cntr=0
-	#print string
-	#print space_pos
 	twid=string[0:space_pos[cntr]]
-	#cntr+=1
-	#print twid
-	#print string[space_pos[cntr]+1]
-	#pred_politics=prior_politics
-	#pred_sports=prior_sports
 	while(i>=2):
 			temp=string[space_pos[cntr]+1:space_pos[cntr+1]]
 			print temp
