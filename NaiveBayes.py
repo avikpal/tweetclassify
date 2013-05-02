@@ -11,11 +11,10 @@ sports_count=0
 politics_count=0
 
 for string in lines:
-	#print'reading input' 
+	
 	string = re.sub("[',+]",' ',string)
 	string = re.sub('["]',' ',string)
 	
-	#' '.join(string.split())
 	string=string.replace('  ',' ')
 	string=string.replace('  ',' ')
 	string=string.replace('  ',' ')
@@ -26,24 +25,23 @@ for string in lines:
 		sports_count+=1
 		i=len(space_pos)
 		cntr=1
-		#print space_pos
+		
 		while(i>2):
 			temp=string[space_pos[cntr]+1:space_pos[cntr+1]]
-			#print temp
+			
 			if temp[0]=='#':
  				sports_hash_url.append(temp)
 			elif len(temp)>4:
 				if temp[0:3]=='http':
 					sports_hash_url.append(temp)
-					#sports_count+=1				
+									
 				elif temp in sports:
-					#print 'in here'
+					
 					sports[temp]+=1
-					#print sports[temp]
-					#sports_count+=1
+					
  				else:
 					sports[temp]=0
-					#sports_count+=1
+					
 			elif temp in sports:
 				#print 'in here'
 				sports[temp]+=1
