@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#code for parsing the tweets
 import re
 lines = [line.strip() for line in open('valid.txt')]
 f=open('output','w')
